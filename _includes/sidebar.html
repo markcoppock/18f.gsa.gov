@@ -4,6 +4,7 @@ Add sidebars filtered by layout below
 
 {% if page.layout == "profile" %}
 <aside>
+	{% authored_posts heading=h3 %}
 	{% if page.project %}
 	<h3>{{ page.first_name }}'s projects:</h3>
 		<ul>
@@ -12,7 +13,6 @@ Add sidebars filtered by layout below
 			{% endfor %}
 		</ul>
 	{% endif %}
-	{% authored_posts heading=h3 %}
 </aside>
 {% endif %}
 
