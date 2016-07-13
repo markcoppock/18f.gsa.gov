@@ -27,7 +27,10 @@
 <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
 <!-- title, description, and image may change per-page, per-post -->
-{% if page.title %}
+{% if page.full_name %}
+  <title>18F &mdash; {{ page.full_name }}</title>
+  <meta property="og:title" content="{{ page.title | xml_escape }}" />
+{% elsif page.title %}
   <title>18F &mdash; {{ page.title }}</title>
   <meta property="og:title" content="{{ page.title | xml_escape }}" />
 {% else %}
