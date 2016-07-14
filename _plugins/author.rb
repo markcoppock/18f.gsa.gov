@@ -52,6 +52,8 @@ module Jekyll
           list << "<li><a href='#{site_url}#{a.url}'>#{a.data['title']}</a></li>"
         end
         list << "</ul>"
+      else
+        list = "<#{@heading}>#{first_name} hasn't written any blog posts.</#{@heading}>"
       end
     end
   end
